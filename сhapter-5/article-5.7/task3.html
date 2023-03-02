@@ -1,0 +1,14 @@
+<script>
+    "use strict";
+    // Перебираемые ключи
+    let map = new Map();
+
+    map.set("name", "John");
+
+    // let keys = map.keys(); - map.keys() возвращает итерируемый объект, а не массив.
+    let keys = Array.from(map.keys()); // конвертируем в массив
+
+    keys.push("more");
+
+    console.log(keys); // name, more
+</script>

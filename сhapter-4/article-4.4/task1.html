@@ -1,0 +1,16 @@
+<script>
+    "use strict";
+    // Использование "this" в литерале объекта
+    function makeUser() {
+        return {
+            name: "John",
+            ref: this
+        };
+    }
+
+    let user = makeUser();
+
+    alert( user.ref.name ); // Uncaught TypeError: Cannot read properties of undefined (reading 'name') at <anonymous>
+    // this внутри makeUser() равно undefined, потому что оно вызывается как функция, а не как метод объекта
+    // this ссылается на глобальный контекст, то есть на "Window"
+</script>
