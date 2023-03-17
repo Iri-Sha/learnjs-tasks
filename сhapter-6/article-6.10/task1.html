@@ -1,0 +1,13 @@
+<script>
+    "use strict"
+    // Связанная функция как метод
+    function f() {
+        alert( this ); 
+    }
+
+    let user = {
+        g: f.bind(null)
+    };
+
+    user.g(); // null
+</script>

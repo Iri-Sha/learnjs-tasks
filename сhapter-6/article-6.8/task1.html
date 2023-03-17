@@ -1,0 +1,33 @@
+<script>
+    "use strict"
+    // Вывод каждую секунду
+    function printNumbers(from, to) {
+        let current = from;
+        function go() {
+            alert(current);
+            if (current == to) {
+            clearInterval(timerId);
+            }
+            current++;
+        }
+        go();
+        let timerId = setInterval(go, 1000);
+    }
+
+    printNumbers(5, 10);
+
+    function printNumbersRec(from, to) {
+        let current = from;
+        function go() {
+            alert(current);
+            if (current < to) {
+                setTimeout(go, 1000);
+            }
+            current++;
+        }
+        go();
+        let timerId = setTimeout(go, 1000);
+    }
+
+    printNumbersRec(5, 10);
+</script>

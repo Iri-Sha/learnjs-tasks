@@ -1,0 +1,7 @@
+<script>
+    "use strict"
+    // Вопрос о соседях
+    // Если elem – произвольный узел DOM-элемента…
+    elem.lastChild.nextSibling = null; // Верно. Элемент elem.lastChild всегда последний, у него нет ссылки nextSibling
+    elem.children[0].previousSibling = null; // Неверно. Потому что elem.children[0] – потомок-элемент. Но перед ним могут быть другие узлы.
+</script>

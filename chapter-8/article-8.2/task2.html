@@ -1,0 +1,22 @@
+<script>
+    "use strict"
+    // Создайте новый объект с помощью уже существующего
+    function Rabbit(name) {
+        this.name = name;
+    }
+
+    let rabbit = new Rabbit("White Rabbit");
+    let rabbit2 = new rabbit.constructor("Black Rabbit");
+
+    console.log(rabbit2.name); // Black Rabbit (сработает, если мы не меняли "prototype", используемый по умолчанию)
+
+    function Snake(name) {
+        this.name = name;
+    }
+    Snake.prototype = {};
+
+    let snake = new Snake("Cobra");
+    let snake2 = new snake.constructor("Python");
+
+    console.log(snake2.name); // undefined (нет свойства "constructor")
+</script>

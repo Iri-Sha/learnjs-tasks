@@ -1,0 +1,14 @@
+<script>
+    "use strict"
+    // Свойство функции после bind
+    function sayHi() {
+        alert( this.name );
+    }
+    sayHi.test = 5;
+
+    let bound = sayHi.bind({
+        name: "Вася"
+    });
+
+    alert( bound.test ); // undefined, т.к. результатом работы bind является другой объект, а у него нет свойства test.
+</script>

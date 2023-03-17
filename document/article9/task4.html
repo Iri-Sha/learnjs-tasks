@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+</head>
+
+<body>
+
+  <script>
+    // В чём отличие CSS-свойств width и clientWidth
+    /* В чём отличие между getComputedStyle(elem).width и elem.clientWidth?
+    1. clientWidth соответствует внутренней области элемента, включая внутренние отступы padding, а CSS-ширина (при стандартном значении box-sizing) соответствует внутренней области без внутренних отступов padding.
+    2. getComputedStyle не всегда даст ширину, он может вернуть, к примеру, "auto" для строчного элемента.
+    3. clientWidth возвращает число, а getComputedStyle(elem).width – строку с px на конце.
+    4. Свойство clientWidth всегда обозначает размер за вычетом прокрутки, т.е. реально доступный для содержимого.
+        А CSS-свойство width ведет себя по-разному в зависимости от брайзера.
+    */
+  </script>
+</body>
+</html>
