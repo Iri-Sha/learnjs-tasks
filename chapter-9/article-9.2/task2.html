@@ -1,0 +1,22 @@
+<!doctype html>
+<script src="clock.js"></script>
+<script>
+  // Улучшенные часы
+  /*let clock = new Clock({
+    template: 'h:m:s'
+  });
+  clock.start();*/
+
+
+  /* Your class should work like this: */
+
+  let lowResolutionClock = new ExtendedClock({
+    template: 'h:m:s',
+    precision: 10000
+  });
+
+  lowResolutionClock.start();
+
+</script>
+
+</html>
